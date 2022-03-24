@@ -1,0 +1,35 @@
+.tourist_card {
+  width: 100%;
+  padding: 0.5em;
+  background: rgb(160, 160, 160);
+  border-radius: 30px;
+  margin: 1em 0;
+  overflow-y: scroll;
+  box-shadow: 0 0 12px 2px #ffc107;
+}
+.tourist_card::-webkit-scrollbar {
+  display: none;
+}
+.card_img {
+  margin: 0 auto;
+  display: block;
+  max-width: 90%;
+  border-radius: 20px;
+}
+.tourist_card h1 {
+  text-align: center;
+  margin: 0.5em 0;
+}
+@media screen and (min-width: 500px) {
+  .tourist_card {
+    width: 30%;
+    height: 400px;
+    text-align: center;
+    overflow-y: scroll;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .tourist_card {
+    height: 500px;
+  }
+}

@@ -1,0 +1,19 @@
+.card_btn {
+  color: wheat;
+  background-color: black;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  align-items: center;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 1s;
+  font-weight: 600;
+}
+.card_btn:hover {
+  color: wheat;
+  text-decoration: none;
+  background: orangered;
+  color: black;
+}

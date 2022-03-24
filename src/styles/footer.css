@@ -1,0 +1,24 @@
+.footer {
+  width: 100%;
+  background: #ffc107;
+  padding: 0.5em;
+  font-weight: 600;
+  font-size: 0.5rem;
+}
+.footer h6 {
+  font-size: 0.5rem;
+  text-align: center;
+}
+.footer ul li {
+  list-style: none;
+}
+@media screen and (min-width: 500px) {
+  .footer {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .footer h6 {
+    font-size: 1rem;
+  }
+}

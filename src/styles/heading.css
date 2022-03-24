@@ -1,0 +1,16 @@
+.nav_header {
+  width: 100%;
+  background: #ffc107;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 2px 0 14px 2px black;
+  padding: 1em;
+  filter: blur(1);
+}
+.nav_logo {
+  max-width: 70px;
+}
+.nav_header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}

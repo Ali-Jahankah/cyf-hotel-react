@@ -1,0 +1,21 @@
+.tourist_cards {
+  width: 100%;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+.tourist_title {
+  text-align: center;
+  color: #ffc107;
+  background: black;
+  padding: 0.5em 0;
+  border-radius: 30px;
+  margin: 0.5em 0;
+}
+
+@media screen and (min-width: 500px) {
+  .tourist_cards {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}

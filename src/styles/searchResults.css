@@ -1,0 +1,27 @@
+.result_article {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 0.3rem;
+  text-align: center;
+}
+.search_table {
+  width: 100%;
+  font-size: 0.5rem;
+}
+.search_table thead {
+  background: black;
+  color: wheat;
+}
+.search_table tbody tr:nth-child(odd) {
+  background: rgb(163, 163, 163);
+}
+@media screen and (min-width: 500px) {
+  .search_table {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .search_table {
+    font-size: 0.9rem;
+  }
+}
