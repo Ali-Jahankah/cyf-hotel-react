@@ -12,8 +12,9 @@
   background: black;
   color: wheat;
 }
-.search_table tbody tr:nth-child(odd) {
-  background: rgb(163, 163, 163);
+
+.highlighted {
+  background: gray;
 }
 @media screen and (min-width: 500px) {
   .search_table {

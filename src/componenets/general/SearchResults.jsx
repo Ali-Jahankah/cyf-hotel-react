@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import moment from "moment";
 import "../../styles/searchResults.css";
 const SearchResults = ({ result }) => {
+  const [color, setColor] = useState("");
   return (
     <article className="result_article">
       <table className="search_table">
@@ -25,7 +26,13 @@ const SearchResults = ({ result }) => {
               "days"
             );
             return (
-              <tr key={index}>
+              <tr
+                key={index}
+                onClick={() => {
+                  console.log(result[index].styles);
+                }}
+                className={color}
+              >
                 <td>{obj.id}</td>
                 <td>{obj.title}</td>
                 <td>{obj.firstName}</td>

@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Search from "./Search.js";
 import "../../styles/booking.css";
 import SearchResults from "./SearchResults";
-import FakeBookings from "../../data/fakeBookings.json";
+import fakeBookings from "../../data/fakeBookings.json";
 
 const Bookings = () => {
-  const allData = FakeBookings;
+  const [bookings, setBookings] = useState(fakeBookings);
   const search = searchVal => {
     console.info("TO DO!", searchVal);
   };
@@ -17,7 +17,7 @@ const Bookings = () => {
           <Search search={search} />
         </div>
       </div>
-      <SearchResults result={allData} />
+      <SearchResults result={bookings} />
     </>
   );
 };
