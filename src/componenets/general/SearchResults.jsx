@@ -42,7 +42,6 @@ const SearchResults = ({ result }) => {
                 onClick={() => handleClickTr(obj.id)}
                 className={chosen[obj.id] ? "highlighted" : ""}
               >
-                let chosen={}
                 <td>{obj.id}</td>
                 <td>{obj.title}</td>
                 <td>{obj.firstName}</td>
