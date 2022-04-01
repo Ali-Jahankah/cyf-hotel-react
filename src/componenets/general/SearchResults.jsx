@@ -2,7 +2,17 @@ import React, { useState } from "react";
 import moment from "moment";
 import "../../styles/searchResults.css";
 const SearchResults = ({ result }) => {
-  const [color, setColor] = useState("");
+  const [chosen, setChosen] = useState({});
+
+  const handleClickTr = id => {
+    if (chosen[id]) {
+      setChosen(prev => ({ ...prev, [id]: false }));
+    } else {
+      setChosen(prev => ({ ...prev, [id]: true }));
+    }
+  };
+
+  console.log(chosen);
   return (
     <article className="result_article">
       <table className="search_table">
@@ -25,14 +35,14 @@ const SearchResults = ({ result }) => {
               moment(obj.checkInDate),
               "days"
             );
+
             return (
               <tr
                 key={index}
-                onClick={() => {
-                  console.log(result[index].styles);
-                }}
-                className={color}
+                onClick={() => handleClickTr(obj.id)}
+                className={chosen[obj.id] ? "highlighted" : ""}
               >
+                let chosen={}
                 <td>{obj.id}</td>
                 <td>{obj.title}</td>
                 <td>{obj.firstName}</td>
