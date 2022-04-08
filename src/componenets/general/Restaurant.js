@@ -3,7 +3,7 @@ import "../../styles/retaurant.css";
 import Order from "./Order";
 const Restaurant = () => {
   return (
-    <div>
+    <div className="restaurant_cont">
       <h3>Restaurant Orders</h3>
       <ul>
         <Order orderType="Pizza" />

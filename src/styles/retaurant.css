@@ -1,0 +1,19 @@
+.restaurant_cont {
+  width: 100%;
+  padding: 0.5em;
+  text-align: center;
+}
+.restaurant_cont h3 {
+  text-align: center;
+}
+.restaurant_cont ul {
+  width: 100%;
+  background: gray;
+  border-radius: 10px;
+}
+.restaurant_cont ul li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0.5em;
+}

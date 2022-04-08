@@ -16,6 +16,10 @@
 .highlighted {
   background: gray;
 }
+.profile_btn {
+  background: rgb(255, 174, 0);
+  cursor: pointer;
+}
 @media screen and (min-width: 500px) {
   .search_table {
     font-size: 0.7rem;

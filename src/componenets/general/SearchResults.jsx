@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import moment from "moment";
 import "../../styles/searchResults.css";
+import CustomerProfile from "./CustomerProfile";
 const SearchResults = ({ result }) => {
   const [chosen, setChosen] = useState({});
+  const [userId, setUserId] = useState("");
 
   const handleClickTr = id => {
     if (chosen[id]) {
@@ -12,7 +14,6 @@ const SearchResults = ({ result }) => {
     }
   };
 
-  console.log(chosen);
   return (
     <article className="result_article">
       <table className="search_table">
@@ -27,6 +28,7 @@ const SearchResults = ({ result }) => {
             <td>check in date</td>
             <td>check out date</td>
             <td>Nights</td>
+            <td>Profile</td>
           </tr>
         </thead>
         <tbody>
@@ -51,11 +53,18 @@ const SearchResults = ({ result }) => {
                 <td>{obj.checkInDate}</td>
                 <td>{obj.checkOutDate}</td>
                 <td>{staying}</td>
+                <button
+                  className="profile_btn"
+                  onClick={() => setUserId(obj.id)}
+                >
+                  Show profile
+                </button>
               </tr>
             );
           })}
         </tbody>
       </table>
+      <CustomerProfile id={userId} />
     </article>
   );
 };
