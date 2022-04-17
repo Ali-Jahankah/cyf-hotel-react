@@ -3,6 +3,7 @@
   padding: 0.5em;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .tourist_title {
   text-align: center;
