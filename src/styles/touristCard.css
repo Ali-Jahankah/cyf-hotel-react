@@ -6,6 +6,9 @@
   margin: 1em 0;
   overflow-y: scroll;
   box-shadow: 0 0 12px 2px #ffc107;
+  height: 400px;
+  text-align: center;
+  overflow-y: scroll;
 }
 .tourist_card::-webkit-scrollbar {
   display: none;
@@ -22,14 +25,14 @@
 }
 @media screen and (min-width: 500px) {
   .tourist_card {
-    width: 30%;
-    height: 400px;
-    text-align: center;
-    overflow-y: scroll;
+    width: 45%;
   }
 }
 @media screen and (min-width: 1024px) {
   .tourist_card {
     height: 500px;
+  }
+  .tourist_card {
+    width: 32%;
   }
 }

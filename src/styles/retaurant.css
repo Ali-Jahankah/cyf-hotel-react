@@ -1,19 +1,44 @@
 .restaurant_cont {
-  width: 100%;
-  padding: 0.5em;
+  width: 95%;
+  margin: 1em auto;
   text-align: center;
+}
+.orders_div {
+  width: 100%;
+  padding: 1em;
+  background: linear-gradient(
+    rgb(255, 57, 90),
+    rgb(64, 195, 255),
+    rgb(57, 242, 24),
+    rgb(255, 208, 0),
+    rgb(215, 3, 3),
+    rgb(255, 128, 0),
+    rgb(170, 222, 255),
+    rgb(255, 80, 31)
+  );
+  border-top-left-radius: 70%;
+  border-bottom-right-radius: 75%;
 }
 .restaurant_cont h3 {
   text-align: center;
 }
-.restaurant_cont ul {
+.restaurant_cont table {
   width: 100%;
-  background: gray;
+  background: rgb(39, 38, 36);
   border-radius: 10px;
+  color: wheat;
 }
-.restaurant_cont ul li {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.restaurant_cont table tr td {
   padding: 0.5em;
+}
+
+@media screen and (min-width: 500px) {
+  .restaurant_cont {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .restaurant_cont {
+    width: 40%;
+  }
 }

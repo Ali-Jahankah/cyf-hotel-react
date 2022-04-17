@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import moment from "moment";
 import "../../styles/searchResults.css";
 import CustomerProfile from "./CustomerProfile";
-const SearchResults = ({ result }) => {
+const SearchResults = ({ filteredBookings }) => {
   const [chosen, setChosen] = useState({});
   const [userId, setUserId] = useState("");
 
@@ -14,7 +14,7 @@ const SearchResults = ({ result }) => {
     }
   };
 
-  return (
+  return filteredBookings.length > 0 ? (
     <article className="result_article">
       <table className="search_table">
         <thead>
@@ -32,7 +32,7 @@ const SearchResults = ({ result }) => {
           </tr>
         </thead>
         <tbody>
-          {result.map((obj, index) => {
+          {filteredBookings.map((obj, index) => {
             let staying = moment(obj.checkOutDate).diff(
               moment(obj.checkInDate),
               "days"
@@ -53,19 +53,23 @@ const SearchResults = ({ result }) => {
                 <td>{obj.checkInDate}</td>
                 <td>{obj.checkOutDate}</td>
                 <td>{staying}</td>
-                <button
-                  className="profile_btn"
-                  onClick={() => setUserId(obj.id)}
-                >
-                  Show profile
-                </button>
+                <td>
+                  <button
+                    className="profile_btn"
+                    onClick={() => setUserId(obj.id)}
+                  >
+                    Show profile
+                  </button>
+                </td>
               </tr>
             );
           })}
         </tbody>
       </table>
-      <CustomerProfile id={userId} />
+      <CustomerProfile id={userId} setUserId={setUserId} />
     </article>
+  ) : (
+    <h1 className="noresult">Nothing Found :(</h1>
   );
 };
 

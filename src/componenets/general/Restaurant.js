@@ -5,11 +5,15 @@ const Restaurant = () => {
   return (
     <div className="restaurant_cont">
       <h3>Restaurant Orders</h3>
-      <ul>
-        <Order orderType="Pizza" />
-        <Order orderType="Salads" />
-        <Order orderType="Chocolate Cake" />
-      </ul>
+      <div className="orders_div">
+        <table>
+          <tbody>
+            <Order orderType="Pizza" />
+            <Order orderType="Salads" />
+            <Order orderType="Chocolate Cake" />
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

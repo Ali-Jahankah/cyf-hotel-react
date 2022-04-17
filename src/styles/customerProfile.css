@@ -1,25 +1,51 @@
-.user_profile {
+.user_profile_article {
   width: 100%;
-  margin: 0 auto;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000000e0;
+  margin: auto auto;
   padding: 1em;
   font-size: 1rem;
   text-align: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.user_profile h1 {
+.user_profile_section {
+  width: 100%;
+  margin: auto auto;
+}
+.user_profile_article h1 {
   font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffec04;
 }
-.user_profile table {
+.user_profile_article table {
   margin: 0 auto;
   border-radius: 20px;
 }
-.user_profile table tr td {
+.user_profile_article table tr td {
   padding: 0.5em;
 }
-.user_profile table tbody tr:nth-child(odd) {
+.user_profile_article table tbody tr:nth-child(odd) {
   background: black;
   color: yellow;
 }
-.user_profile table tbody tr:nth-child(even) {
+.user_profile_article table tbody tr:nth-child(even) {
   background: yellow;
   color: black;
+}
+.exit_profile {
+  text-align: center;
+  transform: translateX(-50%);
+  font-weight: 800;
+  font-size: 2rem;
+  background: brown;
+  padding: 0 0.5em;
+  position: absolute;
+  top: 2em;
+  cursor: pointer;
 }

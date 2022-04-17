@@ -6,40 +6,43 @@ import SearchResults from "./SearchResults";
 
 const Bookings = () => {
   const [bookings, setBookings] = useState([]);
-  const [filteredBookings, setFilteredBookings] = useState([]);
   const [searchInput, setSearchInput] = useState("");
+  const [filteredBookings, setFilteredBookings] = useState([]);
   const search = searchVal => {
-    if (searchVal && searchVal.length > 0) {
-      const arr = bookings.filter(
+    const arr = [...bookings];
+
+    setFilteredBookings(
+      arr.filter(
         item =>
           item.firstName.toLowerCase().includes(searchVal.toLowerCase()) ||
           item.surname.toLowerCase().includes(searchVal.toLowerCase())
-      );
-      setFilteredBookings(arr);
-    }
+      )
+    );
   };
-
   useEffect(() => {
-    fetch("https://cyf-react.glitch.me")
-      .then(res => res.json())
-      .then(data => {
-        setBookings(data);
-        setFilteredBookings(data);
-      });
-  }, []);
+    bookings.length === 0 &&
+      fetch("https://cyf-react.glitch.me")
+        .then(res => res.json())
+        .then(data => {
+          setBookings(data);
+          setFilteredBookings(data);
+        });
+  }, [bookings]);
 
   return (
     <>
       <div className="App-content">
         <div className="container">
           <Search
-            search={search}
             searchInput={searchInput}
+            bookings={bookings}
             setSearchInput={setSearchInput}
+            search={search}
           />
         </div>
       </div>
-      <SearchResults result={filteredBookings} />
+
+      <SearchResults filteredBookings={filteredBookings} />
     </>
   );
 };

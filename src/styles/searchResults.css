@@ -1,14 +1,19 @@
 .result_article {
   width: 100%;
-  padding: 0.5em;
+  padding: 1em;
   font-size: 0.3rem;
   text-align: center;
+  overflow-x: auto;
 }
 .search_table {
-  width: 100%;
+  width: 95%;
   font-size: 0.5rem;
+  border-collapse: separate;
+  border-spacing: 0 1em;
+  margin: 0 auto;
 }
-.search_table thead {
+.search_table thead tr td {
+  padding: 0.2em;
   background: black;
   color: wheat;
 }
@@ -19,7 +24,15 @@
 .profile_btn {
   background: rgb(255, 174, 0);
   cursor: pointer;
+  padding: 0.5em;
 }
+.noresult {
+  text-align: center;
+  margin: 1em auto;
+  background-color: rgb(255, 183, 0);
+  padding: 0.5em;
+}
+
 @media screen and (min-width: 500px) {
   .search_table {
     font-size: 0.7rem;

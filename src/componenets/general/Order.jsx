@@ -6,9 +6,13 @@ const Order = ({ orderType }) => {
     setOrders(() => orders + 1);
   };
   return (
-    <li>
-      {orderType}: {orders} <RestaurantButton orderOne={orderOne} />
-    </li>
+    <tr>
+      <td>{orderType}</td>
+      <td>{orders}</td>
+      <td>
+        <RestaurantButton orderOne={orderOne} />
+      </td>
+    </tr>
   );
 };
 

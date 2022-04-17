@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import SearchBtn from "./SearchBtn";
 import "../../styles/search.css";
 const Search = ({ search, searchInput, setSearchInput }) => {
